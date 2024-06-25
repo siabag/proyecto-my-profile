@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importacion del archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Libreria externa de iconos https://boxicons.com/-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Libreria externa de iconos https://remixicon.com/-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Fuentes https://fonts.google.com/-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Titulo de mi Web -->
+    <title>Cesar Valencia Web</title>
+</head>
+<body>
+
+    <!-- Esta es la sección cabecera de la página web, la cual tendrá logo y barra de navegación  -->
+    <header>
+        <!-- LOGO -->
+        <a href="#" class="logo">Cesar Valencia</a>
+
+        <!-- Se emplea para que el botón sea clickleable sin usar JavaScript -->
+        <input type="checkbox" name="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon-action">
+            <div class='bx bx-menu' id="menu-icon"></div>
+        </label>        
+
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </header>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+            <div class="hero-text">
+                <h5>Java Developer</h5>
+                <h4>React Tech Lead</h4>
+                <h1>Cesar Valencia</h1>
+                <p>Soy estudiante de Ingeniería de Software, con conocimientos en Java, <br>
+                JavaScript, ReactJS, MySQL, MongoDB, HTML, CSS, NodeJS, y más</p>
+                <a href="#">CV</a>
+                <a href="#" class="works"><i class="ri-todo-fill"></i>Mis trabajos</a>
+            </div>
+
+            <div class="hero-img">
+                <img src="/assets/imgs/cesar.png" alt="cesar valencia photo">
+            </div>
+        </section>
+
+        <div class="icons">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-youtube-line"></i></a>
+            <a href="#"><i class="ri-github-fill"></i></a>
+        </div>
+
+        <div class="scroll-down">
+            <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+        </div>
+</body>
+</html>

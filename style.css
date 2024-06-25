@@ -1,0 +1,296 @@
+/* NORMALIZACION */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*Mantiene el ancho y alto a pesar de padding y border*/
+    font-family: "Inconsolata", monospace;
+    list-style: none;
+    /*Quita la decoración de las listas*/
+    text-decoration: none;
+    /*Quita la decaración de los enlaces*/
+    color: white;
+}
+
+body {
+    background-color: black;
+    /*TODO: Borrar cuando este definido el fondo*/
+}
+
+header {
+    position: fixed;
+    /*Fija el header en la parte superior en compañia del right y top*/
+    right: 0;
+    top: 0;
+    z-index: 100;
+    /*Hace que el header se muestre por encima*/
+    width: 100%;
+    display: flex;
+    /*Los elementos se ponen en linea por defecto la alineación es row*/
+    align-items: center;
+    /*Centra verticalmente*/
+    justify-content: space-between;
+    /*Separa los elementos*/
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    /*Grueso de la fuente*/
+}
+
+.navlist {
+    display: flex;
+    /*Los elementos se ponen en linea por defecto la alineación es row*/
+}
+
+.navlist a {
+    margin-left: 60px;
+    /*Separa los elementos a la izquierda*/
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    /*Subrayado transparente*/
+    transition: all .5s ease;
+    /*Transiciona todas las propiedades del .navlist a*/
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+    /*Subrayado blanco cuando el mouse esta sobre el*/
+}
+
+#menu-icon {
+    display: none;
+    /* Se inicializa en none para solo mostrarse cuando la página esté colapsada*/
+    font-size: 35px;
+    z-index: 101;
+    /*Se establece por encima del header*/
+    cursor: pointer;
+    /*Aparece mano al estar sobre el*/
+}
+
+#menu-toggle {
+    display: none;
+    /*No se desea que el checkbox sea visible*/
+}
+
+.menu-icon-action {
+    display: none;
+    /*No se desea que el label sea visible*/
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    /*Para que se vea completa en toda la pantalla disponible*/
+    background: linear-gradient(245.59deg, #268ab5 0%, #185773 25%, #0c2b39 75%);
+    /*Fondo de pantalla en degradiente*/
+    position: relative;
+    /*Relativo al contenedor y permite utilizar propiedades de posicioón*/
+    display: grid;
+    /*Para dividir el contenedor en dos columnas*/
+    grid-template-columns: 1fr 1fr;
+    /*Se crean las dos columnas*/
+    align-items: center;
+    /*Centra las dos columnas*/
+    gap: 2rem;
+    /*Crea un espacio entre los elementos*/
+}
+
+section {
+    padding: 0 8%;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.hero-text p {
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+.hero-img img {
+    width: 400px;
+    margin: 10% 0 0 10%;
+    height: auto;
+    transition: all 5s linear;
+    /*Hace que la transition sea lineal*/
+}
+
+.hero-img img:hover {
+    width: 450px;
+    opacity: 0.6;
+}
+
+.hero-text a {
+    display: inline-block;
+    /*Para poder darle ancho y alto*/
+    background-color: #4d4d4d;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.hero-text a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(7px);
+}
+
+.hero-text a.works {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.works i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    transition: all .5s ease;
+}
+
+.icons i:hover {
+    color: #4d4d4d;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    background-color: #21383d;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5%);
+    opacity: .6;
+}
+
+/*En esta sección se realiza mediaqueries para que la web sea responsive*/
+
+@media (max-width:992px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text {
+        padding-top: 0;
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 80%;
+        margin: 10% 0 0 10%;
+    }
+
+    .hero-text p {
+        font-size: 70%;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .menu-icon-action {
+        display: block;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-img img {
+        margin: 0;
+    }
+
+    .hero {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 180px;
+        background-color: #0a2430e7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .5s ease-in-out;
+    }
+
+    .navlist a {
+        display: block;
+        margin: 7px 0;
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+    }
+}
