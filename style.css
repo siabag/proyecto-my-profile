@@ -70,6 +70,7 @@ header {
     /*Se establece por encima del header*/
     cursor: pointer;
     /*Aparece mano al estar sobre el*/
+    display: none;
 }
 
 #menu-toggle {
@@ -290,7 +291,7 @@ section {
         margin: 7px 0;
     }
 
-    #menu-toggle:checked + label.menu-icon-action + ul{
+    .navlist.open{
         right: 0;
     }
 }
